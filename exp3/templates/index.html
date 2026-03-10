@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Heart Disease Prediction</title>
+    <title>Heart Disease Prediction</title>
 </head>
 
 <body>
@@ -10,20 +11,28 @@
 
 <form action="/predict" method="post">
 
-Age: <input type="text" name="age"><br><br>
-Sex: <input type="text" name="sex"><br><br>
-Chest Pain: <input type="text" name="cp"><br><br>
-Blood Pressure: <input type="text" name="trestbps"><br><br>
-Cholesterol: <input type="text" name="chol"><br><br>
-FBS: <input type="text" name="fbs"><br><br>
-Rest ECG: <input type="text" name="restecg"><br><br>
-Max Heart Rate: <input type="text" name="thalach"><br><br>
-Exercise Angina: <input type="text" name="exang"><br><br>
-Oldpeak: <input type="text" name="oldpeak"><br><br>
+Age:<br>
+<input type="number" name="age" required><br><br>
 
-<button type="submit">Predict</button>
+Sex (0 = Female, 1 = Male):<br>
+<input type="number" name="sex" required><br><br>
+
+Chest Pain Type:<br>
+<input type="number" name="cp" required><br><br>
+
+Resting Blood Pressure:<br>
+<input type="number" name="trestbps" required><br><br>
+
+Cholesterol:<br>
+<input type="number" name="chol" required><br><br>
+
+<input type="submit" value="Predict">
 
 </form>
+
+<br>
+
+<h3>{{ prediction }}</h3>
 
 </body>
 </html>
